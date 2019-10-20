@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mission to Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="jumbotron text-center">
+      <!-- Render our data -->
+      <h1>Mission to Mars</h1>
+      <a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a>
+    </div>
+    <br>
+    <div class="row" id="mars_data">
+      <div class="col-md-12">
+        <h3><b>Latest Mars News</b></h3>
+        <h4><b>{{mars_data.news_title}}</b></h4>
+        <p>{{mars_data.news_p}}</p>
+      </div>
+      <div class="row" id="mars_data">
+        <div class="col-md-8">
+          <h3><b>Featured Mars Image</b></h3>
+          <img src={{mars_data.featured_image_url}} alt="featured image" width=700 height=400>
+          <br>
+          <br>
+        </div>
+        <div class="col-md-4" id="mars_data">
+          <h5><b>Current Weather on Mars</b></h5>
+          <p>{{mars_data.mars_weather}}</p>
+          <br>
+          <h5><b>Martian Facts</b></h5>
+          <!-- {{mars_data.mars_table}} HTML does not work-->
+          <table border="1" class="dataframe">
+            <tbody>
+              <tr>
+                <td>Equatorial Diameter:</td>
+                <td>6,792 km</td>
+              </tr>
+              <tr>
+                <td>Polar Diameter:</td>
+                <td>6,752 km</td>
+              </tr>
+              <tr>
+                <td>Mass:</td>
+                <td>6.39 × 10^23 kg (0.11 Earths)</td>
+              </tr>
+              <tr>
+                <td>Moons:</td>
+                <td>2 (Phobos &amp; Deimos)</td>
+              </tr>
+              <tr>
+                <td>Orbit Distance:</td>
+                <td>227,943,824 km (1.38 AU)</td>
+              </tr>
+              <tr>
+                <td>Orbit Period:</td>
+                <td>687 days (1.9 years)</td>
+              </tr>
+              <tr>
+                <td>Surface Temperature:</td>
+                <td>-87 to -5 °C</td>
+              </tr>
+              <tr>
+                <td>First Record:</td>
+                <td>2nd millennium BC</td>
+              </tr>
+              <tr>
+                <td>Recorded By:</td>
+                <td>Egyptian astronomers</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="row" id="mars_data">
+        <div class="col-md-12" id="mars_data">
+          <h3 class="text-center"><b>Mars Hemispheres</b></h3>
+          <br>
+        </div>
+      </div>
+      <div class="row" id = "mars_data">
+        <div class="col-md-6" id = "mars_data">
+            <img src={{mars_data.hemis_dict.0.url}} height = 500 width = 500>
+            <h3>{{mars_data.hemis_dict.0.title}}</h3>
+            <br>
+            <img src={{mars_data.hemis_dict.1.url}} height = 500 width = 500>
+            <h3>{{mars_data.hemis_dict.1.title}}</h3>
+        </div>
+        <div class="col-md-6" id = "mars_data">
+            <img src={{mars_data.hemis_dict.2.url}} height = 500 width = 500>
+            <h3>{{mars_data.hemis_dict.2.title}}</h3>
+            <br>
+            <img src={{mars_data.hemis_dict.3.url}} height = 500 width = 500>
+            <h3>{{mars_data.hemis_dict.3.title}}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  </div>
+</body>
+
+</html>
